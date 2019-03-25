@@ -21,7 +21,10 @@
         android:layout_height="match_parent"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
         android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
         <TextView
@@ -35,7 +38,7 @@
         <Button
             android:id="@+id/ingredientsButton"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="34dp"
             android:text="@string/ingredientsButton"
             tools:layout_editor_absoluteX="317dp"
             tools:layout_editor_absoluteY="125dp" />
@@ -47,6 +50,8 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
     </LinearLayout>
