@@ -4,4 +4,5 @@
     <string name="welcome">Welcome!</string>
     <string name="ingredientsStr">Ingredients</string>
     <string name="ingredientsButton">+</string>
+    <string name="ingredientsStr">Ingredients</string>
 </resources>
