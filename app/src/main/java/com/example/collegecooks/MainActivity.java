@@ -6,9 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
-//Hello, this is Joel
 
-    //this is Lauren
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -16,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void welcome(View v) {
-        Intent intent = new Intent(this, FirstDownloadScreen.class);
+        Intent intent = new Intent(this, DropDown.class);
         startActivity(intent);
     }
 }
