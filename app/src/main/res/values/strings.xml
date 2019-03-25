@@ -2,4 +2,5 @@
     <string name="app_name">CollegeCooks</string>
     <string name="welcomeScreenButton">Try Out College Cooks</string>
     <string name="welcome">Welcome!</string>
+    <string name="ingredientsStr">Ingredients</string>
 </resources>
