@@ -6,53 +6,58 @@
     android:layout_height="match_parent"
     tools:context=".FirstDownloadScreen">
 
-    <Button
-        android:id="@+id/recipesButton"
-        android:layout_width="318dp"
-        android:layout_height="wrap_content"
-        android:text="@string/recipesStr"
-        android:textSize="30sp"
-        tools:layout_editor_absoluteX="46dp"
-        tools:layout_editor_absoluteY="286dp" />
-
-    <LinearLayout
-        android:id="@+id/horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <TextView
-            android:id="@+id/ingredientsText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/ingredientsStr"
-            android:textSize="30sp"
-            tools:layout_editor_absoluteY="690dp" />
-
-        <Button
-            android:id="@+id/ingredientsButton"
-            android:layout_width="wrap_content"
-            android:layout_height="34dp"
-            android:text="@string/ingredientsButton"
-            tools:layout_editor_absoluteX="317dp"
-            tools:layout_editor_absoluteY="125dp" />
-    </LinearLayout>
-
     <LinearLayout
         android:id="@+id/vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
         android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:id="@+id/horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginRight="32dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/ingredientsText"
+                android:layout_width="257dp"
+                android:layout_height="wrap_content"
+                android:text="@string/ingredientsStr"
+                android:textSize="30sp"
+                tools:layout_editor_absoluteY="690dp" />
+
+            <Button
+                android:id="@+id/ingredientsButton"
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:text="@string/ingredientsButton"
+                tools:layout_editor_absoluteX="317dp"
+                tools:layout_editor_absoluteY="125dp" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/recipesButton"
+            android:layout_width="match_parent"
+            android:layout_height="99dp"
+            android:text="@string/recipesStr"
+            android:textSize="30sp"
+            tools:layout_editor_absoluteX="46dp"
+            tools:layout_editor_absoluteY="286dp" />
 
     </LinearLayout>
 
