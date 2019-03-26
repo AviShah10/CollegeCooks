@@ -5,4 +5,5 @@
     <string name="ingredientsStr">Ingredients</string>
     <string name="ingredientsButton">+</string>
     <string name="recipesStr">Recipes</string>
+    <string name="recipesstr">Recipes</string>
 </resources>
