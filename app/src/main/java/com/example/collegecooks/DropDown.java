@@ -13,6 +13,6 @@ public class DropDown extends AppCompatActivity {
         setContentView(R.layout.activity_drop_down);
     }
 
-    public void dropDown()
+    public void dropDown(){}
 
 }
