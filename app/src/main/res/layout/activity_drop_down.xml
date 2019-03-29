@@ -16,15 +16,15 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintVertical_bias="1.0">
 
         <LinearLayout
             android:id="@+id/horizontalIngredients"
             android:layout_width="match_parent"
-            android:layout_height="615dp"
+            android:layout_height="661dp"
             android:layout_marginStart="32dp"
             android:layout_marginLeft="32dp"
             android:layout_marginEnd="32dp"
@@ -49,6 +49,20 @@
                 tools:layout_editor_absoluteX="317dp"
                 tools:layout_editor_absoluteY="125dp" />
 
+            <LinearLayout
+                android:id="@+id/IngredientsDrop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:entries="@array/ingredientsArray"
+                    android:scrollbars="vertical"
+                    android:visibility="visible" />
+            </LinearLayout>
+
         </LinearLayout>
 
         <LinearLayout
@@ -64,13 +78,24 @@
             app:layout_constraintStart_toStartOf="parent">
 
             <Button
+                android:id="@+id/IngredientBottom"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="53dp"
+                android:layout_weight="1"
+                android:text="@string/ingredientsStr"
+                android:textSize="24sp" />
+
+            <Button
                 android:id="@+id/recipesButton"
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
+                android:layout_width="161dp"
+                android:layout_height="wrap_content"
                 android:text="@string/recipesButton"
                 android:textSize="24sp"
                 tools:layout_editor_absoluteX="317dp"
-                tools:layout_editor_absoluteY="125dp" />
+                tools:layout_editor_absoluteY="125dp"
+                style="?android:attr/buttonBarButtonStyle"
+                />
 
         </LinearLayout>
 
