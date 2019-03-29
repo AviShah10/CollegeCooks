@@ -65,12 +65,20 @@
 
             <Button
                 android:id="@+id/recipesButton"
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
+                android:layout_width="161dp"
+                android:layout_height="wrap_content"
                 android:text="@string/recipesButton"
                 android:textSize="24sp"
                 tools:layout_editor_absoluteX="317dp"
                 tools:layout_editor_absoluteY="125dp" />
+
+            <Button
+                android:id="@+id/IngredientBottom"
+                android:layout_width="148dp"
+                android:layout_height="53dp"
+                android:layout_weight="1"
+                android:text="@string/ingredientsStr"
+                android:textSize="24sp" />
 
         </LinearLayout>
 
