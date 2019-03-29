@@ -65,7 +65,8 @@
 
             <Button
                 android:id="@+id/IngredientBottom"
-                android:layout_width="148dp"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
                 android:layout_height="53dp"
                 android:layout_weight="1"
                 android:text="@string/ingredientsStr"
@@ -78,7 +79,9 @@
                 android:text="@string/recipesButton"
                 android:textSize="24sp"
                 tools:layout_editor_absoluteX="317dp"
-                tools:layout_editor_absoluteY="125dp" />
+                tools:layout_editor_absoluteY="125dp"
+                style="?android:attr/buttonBarButtonStyle"
+                />
 
         </LinearLayout>
 
