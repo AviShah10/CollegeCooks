@@ -6,4 +6,5 @@
     <string name="ingredientsButton">+</string>
     <string name="recipesStr">Recipes</string>
     <string name="logoStr">College Cooks Logo</string>
+    <string name="recipesButton">Recipes</string>
 </resources>
