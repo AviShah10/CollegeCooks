@@ -49,6 +49,20 @@
                 tools:layout_editor_absoluteX="317dp"
                 tools:layout_editor_absoluteY="125dp" />
 
+            <LinearLayout
+                android:id="@+id/IngredientsDrop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:entries="@array/ingredientsArray"
+                    android:scrollbars="vertical"
+                    android:visibility="visible" />
+            </LinearLayout>
+
         </LinearLayout>
 
         <LinearLayout
