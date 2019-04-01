@@ -6,6 +6,31 @@
     android:layout_height="match_parent"
     tools:context=".DropDown">
 
+    <RelativeLayout
+        android:id="@+id/ingredientsDrop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="42dp"
+        android:layout_marginLeft="42dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginRight="42dp"
+        android:layout_marginBottom="64dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ListView
+            android:id="@+id/ingredientsListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:entries="@array/ingredientsArray"
+            android:scrollbars="vertical"
+            android:visibility="visible"
+            tools:layout_editor_absoluteY="731dp" />
+    </RelativeLayout>
+
     <LinearLayout
         android:id="@+id/vertical"
         android:layout_width="match_parent"
@@ -41,28 +66,6 @@
                 android:textSize="30sp"
                 tools:layout_editor_absoluteY="690dp" />
 
-            <Button
-                android:id="@+id/ingredientsButton"
-                android:layout_width="wrap_content"
-                android:layout_height="34dp"
-                android:text="@string/ingredientsButton"
-                tools:layout_editor_absoluteX="317dp"
-                tools:layout_editor_absoluteY="125dp" />
-
-            <LinearLayout
-                android:id="@+id/IngredientsDrop"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <ListView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:entries="@array/ingredientsArray"
-                    android:scrollbars="vertical"
-                    android:visibility="visible" />
-            </LinearLayout>
-
         </LinearLayout>
 
         <LinearLayout
@@ -73,6 +76,7 @@
             android:layout_marginLeft="32dp"
             android:layout_marginEnd="32dp"
             android:layout_marginRight="32dp"
+            android:gravity="bottom|start"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent">
@@ -81,21 +85,22 @@
                 android:id="@+id/IngredientBottom"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="0dp"
-                android:layout_height="53dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="toIngredients"
                 android:text="@string/ingredientsStr"
                 android:textSize="24sp" />
 
             <Button
                 android:id="@+id/recipesButton"
-                android:layout_width="161dp"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:text="@string/recipesButton"
                 android:textSize="24sp"
                 tools:layout_editor_absoluteX="317dp"
-                tools:layout_editor_absoluteY="125dp"
-                style="?android:attr/buttonBarButtonStyle"
-                />
+                tools:layout_editor_absoluteY="125dp" />
 
         </LinearLayout>
 
