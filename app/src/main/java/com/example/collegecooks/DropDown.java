@@ -58,4 +58,11 @@ public class DropDown extends AppCompatActivity {
         startActivity(intent);
     }
 
+    /**
+    public void toRecipes(View v) {
+     Intent intent = new Intent(this, NAMEOFCLASS.class);
+     startActivity(intent);
+     }
+     **/
+
 }
