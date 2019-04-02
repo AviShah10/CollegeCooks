@@ -18,22 +18,10 @@ public class DropDown extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_drop_down);
 
+
         listView = (ListView) findViewById(R.id.ingredientsListView);
 
         ArrayList <String> arrayList = new ArrayList<String>();
-
-        arrayList.add("Is this working?");
-        arrayList.add("Yeah I think so");
-        arrayList.add("Cool");
-        arrayList.add("You tryna actually add ingredients?");
-        arrayList.add("Yeah, aiight");
-        arrayList.add("Lemme just flex on Lauren that this works");
-        arrayList.add("Ha get rekt");
-
-        arrayList.add("-------Blank space------");
-        arrayList.add("Joel again, flexxing with this alphabetical order");
-        arrayList.add("I added all of our ingredients too yeet");
-        arrayList.add("Apples");
         arrayList.add("Black Beans");
         arrayList.add("Bread");
         arrayList.add("Cheese");
@@ -48,7 +36,6 @@ public class DropDown extends AppCompatActivity {
         arrayList.add("Vegetable Oil");
 
         ArrayAdapter arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, arrayList);
-
         listView.setAdapter(arrayAdapter);
 
     }
@@ -57,12 +44,10 @@ public class DropDown extends AppCompatActivity {
         Intent intent = new Intent(this, DropDown.class);
         startActivity(intent);
     }
-
-    /**
     public void toRecipes(View v) {
-     Intent intent = new Intent(this, NAMEOFCLASS.class);
-     startActivity(intent);
-     }
-     **/
+        Intent intent = new Intent(this, RecipeView.class);
+        startActivity(intent);
+    }
+
 
 }

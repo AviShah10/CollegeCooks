@@ -88,7 +88,7 @@
                 android:layout_weight="1"
                 android:onClick="toIngredients"
                 android:text="@string/ingredientsStr"
-                android:textSize="24sp" />
+                android:textSize="22sp" />
 
             <Button
                 android:id="@+id/recipesButton"
@@ -96,8 +96,9 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="toRecipes"
                 android:text="@string/recipesButton"
-                android:textSize="24sp"
+                android:textSize="22sp"
                 tools:layout_editor_absoluteX="317dp"
                 tools:layout_editor_absoluteY="125dp" />
 
