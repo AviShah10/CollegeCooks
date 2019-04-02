@@ -27,9 +27,9 @@
 
     <EditText
         android:id="@+id/nameInput"
-        android:layout_width="233dp"
-        android:layout_height="43dp"
-        android:layout_marginTop="92dp"
+        android:layout_width="186dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="84dp"
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
         android:autofillHints=""
@@ -64,20 +64,59 @@
 
     <EditText
         android:id="@+id/recipeTimeInput"
-        android:layout_width="271dp"
+        android:layout_width="221dp"
         android:layout_height="43dp"
         android:layout_marginStart="3dp"
         android:layout_marginLeft="3dp"
         android:layout_marginTop="12dp"
         android:layout_marginBottom="541dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/recipeTimeInputStr"
         android:inputType="textPersonName"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/recipeTime"
         app:layout_constraintTop_toBottomOf="@+id/nameInput"
-        android:autofillHints="" tools:targetApi="o"/>
+        app:layout_constraintVertical_bias="1.0"
+        tools:targetApi="o" />
+
+    <TextView
+        android:id="@+id/recipeDirections"
+        android:layout_width="88dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginLeft="19dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="304dp"
+        android:layout_marginRight="304dp"
+        android:layout_marginBottom="498dp"
+        android:text="@string/recipeDirectionsStr"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recipeTime" />
+
+    <EditText
+        android:id="@+id/recipeDirectionsInput"
+        android:layout_width="255dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="46dp"
+        android:layout_marginRight="46dp"
+        android:layout_marginBottom="488dp"
+        android:ems="10"
+        android:hint="@string/recipeDirectionsInputStr"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/recipeDirections"
+        app:layout_constraintTop_toBottomOf="@+id/recipeTimeInput" />
 
 </android.support.constraint.ConstraintLayout>

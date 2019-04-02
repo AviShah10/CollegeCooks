@@ -11,6 +11,8 @@
     <string name="recipeNameStr">Recipe Name:</string>
     <string name="recipeNameInputStr">Input your recipe name here</string>
     <string name="recipeTimeStr">Time It Takes:</string>
-    <string name="recipeTimeInputStr">Input time it takes to prepare recipe here</string>
+    <string name="recipeTimeInputStr">Input time it takes to prepare here</string>
+    <string name="recipeDirectionsStr">Directions:</string>
+    <string name="recipeDirectionsInputStr">Input the directions for the recipe here</string>
 
 </resources>
