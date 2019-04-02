@@ -7,5 +7,9 @@
     <string name="recipesStr">Recipes</string>
     <string name="logoStr">College Cooks Logo</string>
     <string name="recipesButton">Recipes</string>
+    <string name="recipeNameStr">Recipe Name:</string>
+    <string name="recipeNameInputStr">Input your recipe name here</string>
+    <string name="recipeTimeStr">Time It Takes:</string>
+    <string name="recipeTimeInputStr">Input time it takes to prepare recipe here</string>
 
 </resources>
