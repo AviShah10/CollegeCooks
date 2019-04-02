@@ -10,6 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".UserInput"></activity>
+        <activity
+            android:name=".RecipeView"
+            android:label="@string/title_activity_recipe_view"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity android:name=".DropDown" />
         <activity android:name=".MainActivity">
             <intent-filter>
