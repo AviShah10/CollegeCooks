@@ -25,11 +25,14 @@ public class DropDown extends AppCompatActivity {
         arrayList.add("Black Beans");
         arrayList.add("Bread");
         arrayList.add("Cheese");
+        arrayList.add("Cheese Sauce");
         arrayList.add("Egg");
         arrayList.add("Hot Cheetos");
         arrayList.add("Ice Cream");
         arrayList.add("Kruzteaz Waffle Mix");
+        arrayList.add("Milk");
         arrayList.add("Non-Stick Spray");
+        arrayList.add("Pasta");
         arrayList.add("Pizza");
         arrayList.add("Tomato");
         arrayList.add("Tortillas");
