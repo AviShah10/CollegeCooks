@@ -66,11 +66,18 @@
         android:id="@+id/recipeTimeInput"
         android:layout_width="271dp"
         android:layout_height="43dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="541dp"
         android:ems="10"
         android:hint="@string/recipeTimeInputStr"
         android:inputType="textPersonName"
         android:textSize="14sp"
-        tools:layout_editor_absoluteX="138dp"
-        tools:layout_editor_absoluteY="147dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/recipeTime"
+        app:layout_constraintTop_toBottomOf="@+id/nameInput"
+        android:autofillHints="" tools:targetApi="o"/>
 
 </android.support.constraint.ConstraintLayout>
