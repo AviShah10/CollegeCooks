@@ -23,7 +23,7 @@
         app:layout_constraintHorizontal_bias="0.479"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.181" />
 
     <EditText
         android:id="@+id/nameInput"
@@ -32,13 +32,11 @@
         android:layout_marginTop="84dp"
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginBottom="17dp"
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/recipeNameInputStr"
         android:inputType="textPersonName"
         android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/recipeTimeInput"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/nameText"
@@ -120,6 +118,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/recipeDirections"
         app:layout_constraintTop_toBottomOf="@+id/recipeTimeInput"
-        android:autofillHints="" tools:targetApi="o"/>
+        android:autofillHints="" />
 
 </android.support.constraint.ConstraintLayout>
