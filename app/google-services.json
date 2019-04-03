@@ -1,0 +1,44 @@
+{
+  "project_info": {
+    "project_number": "337003451847",
+    "firebase_url": "https://collegecooks-2c7e5.firebaseio.com",
+    "project_id": "collegecooks-2c7e5",
+    "storage_bucket": "collegecooks-2c7e5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:337003451847:android:620bb12412396af8",
+        "android_client_info": {
+          "package_name": "com.example.collegecooks"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "337003451847-e4l8babl8armjnjoeird9em9binp5rnd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.collegecooks",
+            "certificate_hash": "72fc2a20cd16371eb93fe35951cb0d75e13e4c8f"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMge9lbEBkvAwiuAlQlJuDOBEcm1CWiDE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "337003451847-3gaqu98c5hf5u3753tm0v1ald212t438.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
