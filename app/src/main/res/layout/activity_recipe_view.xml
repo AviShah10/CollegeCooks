@@ -25,11 +25,12 @@
         app:layout_constraintVertical_bias="0.0">
 
         <TextView
-            android:id="@+id/ingredientsText"
+            android:id="@+id/recipeText"
             android:layout_width="257dp"
             android:layout_height="wrap_content"
             android:text="@string/recipesStr"
             android:textSize="30sp"
+            android:textStyle="bold"
             tools:layout_editor_absoluteY="690dp" />
 
     </LinearLayout>
@@ -39,7 +40,7 @@
         android:layout_height="match_parent"
         android:layout_marginStart="42dp"
         android:layout_marginLeft="42dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="58dp"
         android:layout_marginEnd="42dp"
         android:layout_marginRight="42dp"
         android:layout_marginBottom="48dp"
@@ -54,8 +55,11 @@
             android:orientation="vertical">
 
             <android.support.v7.widget.RecyclerView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:id="@+id/recipesList"
+                android:layout_width="370dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimaryDark"
+                android:scrollbars="vertical" />
         </LinearLayout>
     </ScrollView>
 
@@ -65,12 +69,15 @@
         android:layout_height="match_parent"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:gravity="bottom|start"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <Button
             android:id="@+id/IngredientBottom"
