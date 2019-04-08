@@ -1,4 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string-array name="checkBoxArray">
+        <item>Black Beans</item>
+        <item>Bread</item>
+        <item>Cheese</item>
+        <item>Cheese Sauce</item>
+        <item>Egg</item>
+        <item>Hot Cheetos</item>
+        <item>Ice Cream</item>
+        <item>Krusteaz Waffle Mix</item>
+        <item>Milk</item>
+        <item>Non-Stick Spray</item>
+        <item>Pasta</item>
+        <item>Pizza</item>
+        <item>Tomato</item>
+        <item>Tortilla</item>
+        <item>Vegetable Oil</item>
+    </string-array>
 
 </resources>
