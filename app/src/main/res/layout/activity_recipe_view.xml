@@ -102,4 +102,13 @@
             tools:layout_editor_absoluteY="125dp" />
 
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        app:srcCompat="@drawable/pic"
+        tools:layout_editor_absoluteX="264dp"
+        tools:layout_editor_absoluteY="731dp" />
 </android.support.constraint.ConstraintLayout>
