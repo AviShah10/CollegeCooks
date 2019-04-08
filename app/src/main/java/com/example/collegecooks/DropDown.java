@@ -49,6 +49,7 @@ public class DropDown extends AppCompatActivity {
 
 
 
+
         CheckBox checkBox0 = (CheckBox)findViewById(R.id.cb0);
         checkBox0.setText(labels[0]);
         CheckBox checkBox1 = (CheckBox)findViewById(R.id.cb1);
