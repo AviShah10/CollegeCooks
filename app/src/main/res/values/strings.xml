@@ -15,4 +15,6 @@
     <string name="recipeDirectionsStr">Directions:</string>
     <string name="recipeDirectionsInputStr">Input the directions for the recipe here</string>
 
+    <string name="cb1">Black Beans</string>
+
 </resources>

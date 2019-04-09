@@ -21,6 +21,14 @@
             "package_name": "com.example.collegecooks",
             "certificate_hash": "72fc2a20cd16371eb93fe35951cb0d75e13e4c8f"
           }
+        },
+        {
+          "client_id": "337003451847-tkt2e956h6i8ebn3k29n6hko6qqhog3l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.collegecooks",
+            "certificate_hash": "cabd7a3becc013c544a381e31b9d15c85dacea73"
+          }
         }
       ],
       "api_key": [
