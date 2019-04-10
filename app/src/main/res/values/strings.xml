@@ -17,5 +17,6 @@
 
     <string name="cb1">Black Beans</string>
     <string name="recipesTitleStr">Recipes</string>
+    <string name="getRecipesButtonStr">Get Recipes</string>
 
 </resources>
