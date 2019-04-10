@@ -42,7 +42,6 @@
                 android:textSize="30sp"
                 android:textStyle="bold"
                 tools:layout_editor_absoluteY="690dp" />
-
         </LinearLayout>
     </LinearLayout>
 
