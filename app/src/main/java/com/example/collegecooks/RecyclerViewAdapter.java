@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 
@@ -49,8 +50,14 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             public void onClick(View v) {
                 Log.d(TAG, "onCLick: clicked on: " + mImageNames.get(position));
 
-//                Intent intent = new Intent(this, MainActivity.class);
-//                startActivity(intent);
+
+                Toast.makeText(mContext, mImageNames.get(position), Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent(mContext, GalleryActivity.class);
+                intent.putExtra("image_url", mImages.get(position));
+                intent.putExtra("image_name", mImageNames.get(position));
+                mContext.startActivity(intent);
+
             }
         });
 

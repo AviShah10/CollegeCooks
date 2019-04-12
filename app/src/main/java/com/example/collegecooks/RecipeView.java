@@ -7,11 +7,19 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
+
+import com.bumptech.glide.Glide;
+import com.google.firebase.database.core.Context;
 
 import java.util.ArrayList;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 public class RecipeView extends AppCompatActivity {
 
@@ -61,13 +69,16 @@ public class RecipeView extends AppCompatActivity {
         mNames.add("Chicken Salad");
 
         initRecyclerView();
+
     }
+
     private void initRecyclerView(){
         Log.d(TAG, "initRecyclerView: init recyclerView.");
         RecyclerView recyclerView = findViewById(R.id.recycler_view);
         RecyclerViewAdapter adapter = new RecyclerViewAdapter(this, mNames, mImageUrls);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
     }
 
     public void toIngredients(View v) {
@@ -78,5 +89,8 @@ public class RecipeView extends AppCompatActivity {
         Intent intent = new Intent(this, RecipeView.class);
         startActivity(intent);
     }
+
+
+
 
 }
