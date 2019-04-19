@@ -18,5 +18,7 @@
     <string name="cb1">Black Beans</string>
     <string name="recipesTitleStr">Recipes</string>
     <string name="getRecipesButtonStr">Get Recipes</string>
+    <string name="appLogoStr">app logo</string>
+    <string name="logoDescriptionStr">College Cooks App Logo</string>
 
 </resources>
