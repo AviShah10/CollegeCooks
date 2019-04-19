@@ -5,7 +5,7 @@ public class Ingredient {
     private String measure;
     private boolean isMajor;
     private String name;
-
+// Ingredient
     public Ingredient (int denomination, String measure, boolean isMajor, String name){
         this.denomination = denomination;
         this.measure = measure;
