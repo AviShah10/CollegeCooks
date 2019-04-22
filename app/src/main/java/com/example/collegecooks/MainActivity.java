@@ -13,6 +13,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.ArrayList;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,17 +27,31 @@ public class MainActivity extends AppCompatActivity {
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("message");
 
+        Ingredient pizza = new Ingredient(1, "pizza", false, "Pizza");
+        Ingredient hotCheeto = new Ingredient(6, "ounces", false, "Hot Cheeto");
+
+        ArrayList<Ingredient> list = new ArrayList<Ingredient>();
+        list.add(pizza);
+        list.add(hotCheeto);
+
+        Recipe hotCheetoPizza = new Recipe(list, 15, "Put the hot Cheetos on the pizza, " +
+                "either crushed up and sprinkled on the pizza or placed on top of the pizza. Put a handful of" +
+                " Hot Cheetos, or until a desirable amount has been reached.", "Hot Cheeto Pizza");
 
         Log.d("Avi", "Persisting");
-        myRef.setValue("College Cooks");
+        myRef.child("recipes").setValue(hotCheetoPizza);
+
+
 
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 // This method is called once with the initial value and again
                 // whenever data at this location is updated.
-                String value = dataSnapshot.getValue(String.class);
-                Log.d("Avi", "Value is: " + value);
+                for(DataSnapshot child : dataSnapshot.getChildren()){
+//                    child.getValue();
+                    Log.d("MainActivity",child.getValue(Recipe.class).toString());
+                }
             }
 
             @Override
