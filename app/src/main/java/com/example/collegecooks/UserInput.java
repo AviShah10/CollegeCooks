@@ -3,6 +3,7 @@ package com.example.collegecooks;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+
 public class UserInput extends AppCompatActivity {
 
     @Override
@@ -10,4 +11,5 @@ public class UserInput extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_input);
     }
+
 }
