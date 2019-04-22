@@ -20,5 +20,7 @@
     <string name="getRecipesButtonStr">Get Recipes</string>
     <string name="appLogoStr">app logo</string>
     <string name="logoDescriptionStr">College Cooks App Logo</string>
+    <string name="input_recipe_directions">Input Recipe Directions</string>
+    <string name="input_recipe_time_in_minutes">Input Recipe Time (in minutes)</string>
 
 </resources>

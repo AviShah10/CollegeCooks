@@ -6,130 +6,126 @@
     android:layout_height="match_parent"
     tools:context=".UserInput">
 
-    <TextView
-        android:id="@+id/nameText"
-        android:layout_width="160dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="51dp"
-        android:layout_marginLeft="51dp"
-        android:layout_marginTop="92dp"
-        android:layout_marginEnd="273dp"
-        android:layout_marginRight="273dp"
-        android:layout_marginBottom="598dp"
-        android:text="@string/recipeNameStr"
-        android:textColor="@color/colorAccent"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.479"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <EditText
-        android:id="@+id/nameInput"
-        android:layout_width="186dp"
-        android:layout_height="46dp"
-        android:layout_marginTop="84dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="17dp"
-        android:autofillHints=""
-        android:ems="10"
-        android:hint="@string/recipeNameInputStr"
-        android:inputType="textPersonName"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/recipeTimeInput"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/nameText"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:targetApi="o" />
-
-    <TextView
-        android:id="@+id/recipeTime"
-        android:layout_width="122dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="35dp"
-        android:layout_marginEnd="270dp"
-        android:layout_marginRight="270dp"
-        android:layout_marginBottom="548dp"
-        android:text="@string/recipeTimeStr"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nameText"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <EditText
-        android:id="@+id/recipeTimeInput"
-        android:layout_width="221dp"
-        android:layout_height="43dp"
-        android:layout_marginStart="3dp"
-        android:layout_marginLeft="3dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginBottom="541dp"
-        android:autofillHints=""
-        android:ems="10"
-        android:hint="@string/recipeTimeInputStr"
-        android:inputType="textPersonName"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/recipeTime"
-        app:layout_constraintTop_toBottomOf="@+id/nameInput"
-        app:layout_constraintVertical_bias="1.0"
-        tools:targetApi="o" />
-
-    <TextView
-        android:id="@+id/recipeDirections"
-        android:layout_width="88dp"
-        android:layout_height="24dp"
-        android:layout_marginStart="19dp"
-        android:layout_marginLeft="19dp"
-        android:layout_marginTop="26dp"
-        android:layout_marginEnd="304dp"
-        android:layout_marginRight="304dp"
-        android:layout_marginBottom="498dp"
-        android:text="@string/recipeDirectionsStr"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="18sp"
-        android:textStyle="bold"
+    <LinearLayout
+        android:id="@+id/verticalAll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="32dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recipeTime" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <EditText
-        android:id="@+id/recipeDirectionsInput"
-        android:layout_width="255dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="3dp"
-        android:layout_marginLeft="3dp"
-        android:layout_marginTop="13dp"
-        android:layout_marginEnd="46dp"
-        android:layout_marginRight="46dp"
-        android:layout_marginBottom="488dp"
-        android:autofillHints=""
-        android:ems="10"
-        android:hint="@string/recipeDirectionsInputStr"
-        android:inputType="textLongMessage|text"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/recipeDirections"
-        app:layout_constraintTop_toBottomOf="@+id/recipeTimeInput"
-        tools:targetApi="o" />
+        <LinearLayout
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/nameText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/recipeNameStr"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/verticalAll"
+                app:layout_constraintTop_toTopOf="@id/verticalAll" />
+
+            <EditText
+                android:id="@+id/nameInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:ems="10"
+                android:hint="@string/recipeNameInputStr"
+                android:inputType="textPersonName"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@id/verticalAll"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/nameText"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:targetApi="o" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@id/verticalAll"
+            app:layout_constraintTop_toBottomOf="@id/directions">
+
+            <TextView
+                android:id="@+id/recipeTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/recipeTimeStr"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@id/verticalAll"
+                app:layout_constraintTop_toBottomOf="@id/directions" />
+
+            <EditText
+                android:id="@+id/recipeTimeInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:ems="10"
+                android:hint="@string/input_recipe_time_in_minutes"
+                android:inputType="textPersonName"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@id/verticalAll"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/recipeTime"
+                app:layout_constraintTop_toBottomOf="@id/directions"
+                tools:targetApi="o" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/directions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/recipeDirections"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/recipeDirectionsStr"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/verticalAll"
+                app:layout_constraintTop_toBottomOf="@id/time" />
+
+            <EditText
+                android:id="@+id/recipeDirectionsInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:ems="10"
+                android:hint="@string/input_recipe_directions"
+                android:inputType="textLongMessage|text"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@id/verticalAll"
+                app:layout_constraintStart_toEndOf="@+id/recipeDirections"
+                app:layout_constraintTop_toTopOf="@id/verticalAll"
+                tools:targetApi="o" />
+        </LinearLayout>
+
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
