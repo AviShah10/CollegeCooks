@@ -22,5 +22,7 @@
     <string name="logoDescriptionStr">College Cooks App Logo</string>
     <string name="input_recipe_directions">Input Recipe Directions</string>
     <string name="input_recipe_time_in_minutes">Input Recipe Time (in minutes)</string>
+    <string name="input_appliances_needed">Input Appliances Needed</string>
+    <string name="appliances">Appliances:</string>
 
 </resources>
