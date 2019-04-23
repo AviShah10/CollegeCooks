@@ -157,8 +157,21 @@
                 app:layout_constraintStart_toEndOf="@+id/recipeDirections"
                 app:layout_constraintTop_toTopOf="@id/verticalAll"
                 tools:targetApi="o" />
+
         </LinearLayout>
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/submitRecipe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentLeft="true"
+        android:background="#0099FF"
+        android:text="@string/submitRecipeStr"
+        android:textColor="#FFFFFF"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="212dp" />
 
 </android.support.constraint.ConstraintLayout>
