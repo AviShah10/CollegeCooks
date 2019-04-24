@@ -12,17 +12,9 @@ import java.util.ArrayList;
 
 public class UserInput extends AppCompatActivity {
 
+    public void submit(){
 
-    Button submitButton = (Button)(findViewById(R.id.nameInput));
-submitButton.setOnClickListener(new View.OnClickListener() {
-        public void onClick(View view) {
-      		....
-		....
-		....
-        }
-    });
-
-
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
