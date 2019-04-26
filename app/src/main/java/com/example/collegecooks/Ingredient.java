@@ -23,6 +23,12 @@ public class Ingredient implements Parcelable{
         this.name = name;
     }
 
+    public Ingredient (int denomination, String measure, String name){
+        this.denomination = denomination;
+        this.measure = measure;
+        this.name = name;
+    }
+
     protected Ingredient(Parcel in) {
         denomination = in.readInt();
         measure = in.readString();
