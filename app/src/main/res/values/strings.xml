@@ -31,7 +31,7 @@
     <string name="appliancess">Appliances</string>
     <string name="directions_placeholder">Directions PLACEHOLDER </string>
     <string name="submitRecipeStr">Submit</string>
-    <string name="recipeIngredientsStr">Ingredients:</string>
+    <string name="recipeIngredientsStr">Ingredient:</string>
     <string name="denomination">ex. 3</string>
     <string name="measure">ex. cups</string>
     <string name="name">name</string>
