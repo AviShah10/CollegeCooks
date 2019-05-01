@@ -4,21 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/white"
     tools:context=".DropDown">
 
     <TextView
         android:id="@+id/ingredientsText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="5sp"
+        android:layout_marginLeft="5sp"
         android:text="@string/ingredientsStr"
         android:textSize="30sp"
         android:textStyle="bold"
-        android:layout_marginStart="5sp"
-        android:layout_marginLeft="5sp"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="257dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="257dp" />
 
     <ScrollView
         android:id="@+id/scrollView2"

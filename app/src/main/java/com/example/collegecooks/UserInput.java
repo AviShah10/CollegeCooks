@@ -1,7 +1,9 @@
 package com.example.collegecooks;
 
+import android.nfc.Tag;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -20,13 +22,14 @@ public class UserInput extends AppCompatActivity {
         setContentView(R.layout.activity_user_input);
     }
 
-    public void submit(){
+    public void submit(View v){
 
         TextView nameView = findViewById(R.id.recipeNameInput);
         String name = nameView.getText().toString();
 
+        Log.d("UserInpt", "time here");
         TextView timeView = findViewById(R.id.recipeTimeInput);
-        int time = timeView.;//something
+        int time = Integer.parseInt(timeView.getText().toString());
 
         TextView directionsView = findViewById(R.id.recipeDirectionsInput);
         String directions = directionsView.getText().toString();
