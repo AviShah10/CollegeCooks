@@ -17,4 +17,7 @@
         <item>Tortilla</item>
         <item>Vegetable Oil</item>
     </string-array>
+    <!--<Ingredient-array name = "checkBoxArray2">-->
+        <!--<item>new Ingredient(1, "cup", true, "Black Beans")</item>-->
+    <!--</Ingredient-array>-->
 </resources>

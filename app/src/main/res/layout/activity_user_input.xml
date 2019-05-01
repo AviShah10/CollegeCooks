@@ -541,7 +541,7 @@
         tools:layout_editor_absoluteX="323dp"
         app:layout_constraintBottom_toBottomOf="@id/verticalAll"
         app:layout_constraintLeft_toLeftOf="@id/verticalAll"
-        app:layout_constraintLeft_toStartOf="@id/verticalAll"
+        app:layout_constraintStart_toStartOf="@id/verticalAll"
         app:layout_constraintRight_toRightOf="@id/verticalAll"
 
         />

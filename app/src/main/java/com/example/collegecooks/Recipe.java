@@ -13,15 +13,13 @@ public class Recipe {
         this.ingredients = new ArrayList<Ingredient>();
         this.time = 0;
         this.method = "";
-        this.appliances = "";
         this.name = "";
     }
 
-    public Recipe(ArrayList<Ingredient> ingredients, int time, String method, String appliances, String name){
+    public Recipe(ArrayList<Ingredient> ingredients, int time, String method, String name){
         this.ingredients = ingredients;
         this.time = time;
         this.method = method;
-        this.appliances = appliances;
         this.name = name;
 
     }
@@ -33,9 +31,6 @@ public class Recipe {
     }
     public String getMethod() {
         return this.method;
-    }
-    public String getAppliances(){
-        return this.appliances;
     }
     public String getName() {
         return this.name;

@@ -4,7 +4,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class Ingredient implements Parcelable{
-    private int denomination;
+    private double denomination;
     private String measure;
     private boolean isMajor;
     private String name;
@@ -16,7 +16,7 @@ public class Ingredient implements Parcelable{
         this.name = "";
     }
 
-    public Ingredient (int denomination, String measure, boolean isMajor, String name){
+    public Ingredient (double denomination, String measure, boolean isMajor, String name){
         this.denomination = denomination;
         this.measure = measure;
         this.isMajor = isMajor;
@@ -30,7 +30,7 @@ public class Ingredient implements Parcelable{
     }
 
     protected Ingredient(Parcel in) {
-        denomination = in.readInt();
+        denomination = in.readDouble();
         measure = in.readString();
         isMajor = in.readByte() != 0;
         name = in.readString();
@@ -48,7 +48,7 @@ public class Ingredient implements Parcelable{
         }
     };
 
-    public int getDenomination(){
+    public double getDenomination(){
         return this.denomination;
     }
     public String getMeasure(){
@@ -68,7 +68,7 @@ public class Ingredient implements Parcelable{
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-        dest.writeInt(denomination);
+        dest.writeDouble(denomination);
         dest.writeString(measure);
         dest.writeByte((byte) (isMajor ? 1 : 0));
         dest.writeString(name);
