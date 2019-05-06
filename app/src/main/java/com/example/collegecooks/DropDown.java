@@ -60,6 +60,7 @@ public class DropDown extends AppCompatActivity {
         Ingredient ing14 = new Ingredient(1, "tablespoon", true, "Vegetable Oil");
         ingredients.add(ing14);
         Ingredient ing15 = new Ingredient(0.25, "cup", false, "Oil");
+        ingredients.add(ing15);
 
 
         CheckBox checkBox0 = (CheckBox)findViewById(R.id.cb0);

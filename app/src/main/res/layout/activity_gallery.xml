@@ -55,14 +55,14 @@
                 app:layout_constraintTop_toBottomOf="@id/image_description" />
 
             <TextView
-                android:id="@+id/image_appliance"
+                android:id="@+id/image_ingredients"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_weight="70"
-                android:text="@string/appliancess"
+                android:text="@string/ingredients"
                 android:textColor="#000"
                 android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="@id/image_description"
@@ -80,7 +80,7 @@
                 android:textColor="#000"
                 android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="@id/image_description"
-                app:layout_constraintTop_toBottomOf="@id/image_appliance" />
+                app:layout_constraintTop_toBottomOf="@id/image_ingredients" />
         </LinearLayout>
     </ScrollView>
 

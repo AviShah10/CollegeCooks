@@ -1,6 +1,7 @@
 package com.example.collegecooks;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -36,7 +37,6 @@ public class RecipeView extends AppCompatActivity {
     private ArrayList<String> mImageUrls = new ArrayList<>();
     private ArrayList<Ingredient> finalIngredients = new ArrayList<Ingredient>();
     String ing;
-    String recipes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,8 +61,9 @@ public class RecipeView extends AppCompatActivity {
                 // This method is called once with the initial value and again
                 // whenever data at this location is updated
                 for(DataSnapshot child : dataSnapshot.getChildren()){
+                    finalRecipes.add(child.getValue(Recipe.class));
                     mNames.add(child.getValue(Recipe.class).getName());
-                    mImageUrls.add("https://attachments.office.net/owa/ashah2@wpi0.mail.onmicrosoft.com/service.svc/s/GetFileAttachment?id=AAMkAGE3NzViYjljLWEyZWYtNDE2ZC05MmI5LWUzYzVmZjdlM2EyNwBGAAAAAACI%2ftf8sQCIQa5F%2bvOkzO2TBwA2oU3Ny97KTL1PcSvS11GgAAAAYeRcAADwfoJHkV3WS4VikatnowtaAADL85EZAAABEgAQAB%2b2JePANdlAphGlQfuI8hU%3d&owa=outlook.office.com&isImagePreview=True&token=eyJhbGciOiJSUzI1NiIsImtpZCI6IjA2MDBGOUY2NzQ2MjA3MzdFNzM0MDRFMjg3QzQ1QTgxOENCN0NFQjgiLCJ4NXQiOiJCZ0Q1OW5SaUJ6Zm5OQVRpaDhSYWdZeTN6cmciLCJ0eXAiOiJKV1QifQ.eyJ2ZXIiOiJFeGNoYW5nZS5DYWxsYmFjay5WMSIsImFwcGN0eHNlbmRlciI6Ik93YURvd25sb2FkQDU4OWM3NmY1LWNhMTUtNDFmOS04ODRiLTU1ZWMxNWEwNjcyYSIsImFwcGN0eCI6IntcIm1zZXhjaHByb3RcIjpcIm93YVwiLFwicHJpbWFyeXNpZFwiOlwiUy0xLTUtMjEtMzY3MzI4NDY0Mi0xMjgzNzA4NzEwLTEzNTQ2NjQxNjEtMTkwNzk3MjhcIixcInB1aWRcIjpcIjExNTM5NzcwMjU3NjY5NTg2MjJcIixcIm9pZFwiOlwiODY3MzQ0N2YtM2M2ZC00ZjY3LWJjMTUtY2RjYTI5ZjNhZWJlXCIsXCJzY29wZVwiOlwiT3dhRG93bmxvYWRcIn0iLCJuYmYiOjE1NTY3MzI1ODIsImV4cCI6MTU1NjczMzE4MiwiaXNzIjoiMDAwMDAwMDItMDAwMC0wZmYxLWNlMDAtMDAwMDAwMDAwMDAwQDU4OWM3NmY1LWNhMTUtNDFmOS04ODRiLTU1ZWMxNWEwNjcyYSIsImF1ZCI6IjAwMDAwMDAyLTAwMDAtMGZmMS1jZTAwLTAwMDAwMDAwMDAwMC9hdHRhY2htZW50cy5vZmZpY2UubmV0QDU4OWM3NmY1LWNhMTUtNDFmOS04ODRiLTU1ZWMxNWEwNjcyYSJ9.BauCKPaKSCTltIabGiLY7A8YQxFV6hmuqTV3uY0N9ng6uyGQz-tfz45sAtHV1Ewp5mM_221lBeGicIrHzj_3uQx_L2FG40t2_YPOOPDhGV8_8Rx6IbPW9wpznH5j7XzzVS_3zW-xz1V_hoPLwxDb0AvSwrAvRD2Z2garbFg_cm-HeVCshxLtSyhFsXlGKpOX8xKNOV2zLvphHRDXC_V5ab2Z86lslohVqJ1wiT7y2bbqxbeaJ57DrADbLLtyeuPkpA3tcdxZ5T8aZMnjhXcCoGFccbZT45ZQ172RAZelLNv3hK-7XQDEizIcWn7SC05P7-CbcF1s9-F1jIg-3NhuNQ&NoRetry=1");
+                    mImageUrls.add("https://banner2.kisspng.com/20180214/sow/kisspng-food-pyramid-clip-art-food-pyramid-5a83d807cc8440.5540065915185899598377.jpg");
                     initRecyclerView();
 
 //                    finalRecipes.add(child.getValue(Recipe.class));
@@ -75,10 +76,10 @@ public class RecipeView extends AppCompatActivity {
                 Log.w("Avi", "Failed to read value.", error.toException());
             }
         });
-        for(int i = 0; i < finalRecipes.size(); i++){
-            recipes += finalRecipes.get(i).getName() + " ";
-        }
-        Log.d(TAG, "From RecipeView Recipes: " +recipes);
+//        for(int i = 0; i < finalRecipes.size(); i++){
+//            recipes += finalRecipes.get(i).getName() + " ";
+//        }
+//        Log.d(TAG, "From RecipeView Recipes: " +recipes);
 //        initImageBitmaps();
     }
 
@@ -125,7 +126,7 @@ public class RecipeView extends AppCompatActivity {
     private void initRecyclerView(){
         Log.d(TAG, "initRecyclerView: init recyclerView.");
         RecyclerView recyclerView = findViewById(R.id.recycler_view);
-        RecyclerViewAdapter adapter = new RecyclerViewAdapter(this, mNames, mImageUrls);
+        RecyclerViewAdapter adapter = new RecyclerViewAdapter(this, mNames, mImageUrls, finalRecipes);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
@@ -139,10 +140,10 @@ public class RecipeView extends AppCompatActivity {
         Intent intent = new Intent(this, RecipeView.class);
         startActivity(intent);
     }
-    public void toUserInput(View v) {
-        Intent intent = new Intent(this, UserInput.class);
-        startActivity(intent);
-    }
+//    public void toUserInput(View v) {
+//        Intent intent = new Intent(this, UserInput.class);
+//        startActivity(intent);
+//    }
 
 
 

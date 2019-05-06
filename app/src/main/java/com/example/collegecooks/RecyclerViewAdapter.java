@@ -22,14 +22,16 @@ import de.hdodenhof.circleimageview.CircleImageView;
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>{
     private static final String TAG = "RecyclerViewAdapter";
 
-    private ArrayList<String> mImageNames = new ArrayList<>();
-    private ArrayList<String> mImages = new ArrayList<>();
+    private ArrayList<String> mImageUrls = new ArrayList<>();
+    private ArrayList<String> mNames = new ArrayList<>();
+    private ArrayList<Recipe> recipes = new ArrayList<>();
     private Context mContext;
 
-    public RecyclerViewAdapter(Context context, ArrayList<String> imageNames, ArrayList<String> images) {
-        this.mImageNames = imageNames;
-        this.mImages = images;
+    public RecyclerViewAdapter(Context context, ArrayList<String> mNames, ArrayList<String> mImageUrls, ArrayList<Recipe> recipes) {
+        this.mNames = mNames;
+        this.mImageUrls = mImageUrls;
         this.mContext = context;
+        this.recipes = recipes;
     }
 
     @Override
@@ -42,20 +44,23 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position) {
         Log.d(TAG, "onBindViewHolder: called.");
-        Glide.with(mContext).asBitmap().load(mImages.get(position)).into(holder.image);
-        holder.imageName.setText(mImageNames.get(position));
+        Glide.with(mContext).asBitmap().load(mImageUrls.get(position)).into(holder.image);
+        holder.imageName.setText(mNames.get(position));
 
         holder.parentLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d(TAG, "onCLick: clicked on: " + mImageNames.get(position));
+                Log.d(TAG, "onCLick: clicked on: " + mNames.get(position));
 
 
-                Toast.makeText(mContext, mImageNames.get(position), Toast.LENGTH_SHORT).show();
+                Toast.makeText(mContext, mNames.get(position), Toast.LENGTH_SHORT).show();
 
+                Recipe temp = getRecipe(mNames.get(position));
+                Log.d(TAG, temp.getName() + "yessir");
                 Intent intent = new Intent(mContext, GalleryActivity.class);
-                intent.putExtra("image_url", mImages.get(position));
-                intent.putExtra("image_name", mImageNames.get(position));
+                intent.putExtra("image_url", mImageUrls.get(position));
+                intent.putExtra("image_name", mNames.get(position));
+                intent.putExtra("recipe", temp);
                 mContext.startActivity(intent);
 
             }
@@ -65,7 +70,15 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public int getItemCount() {
-        return mImageNames.size();
+        return mNames.size();
+    }
+
+    public Recipe getRecipe(String mName){
+        Log.d(TAG,"Inside getRecipe(): " + mName + " yessir");
+        for(int i = 0; i < recipes.size(); i++){
+            if(recipes.get(i).getName().equals(mName)) return recipes.get(i);
+        }
+        return recipes.get(3);
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
