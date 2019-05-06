@@ -139,7 +139,10 @@ public class RecipeView extends AppCompatActivity {
         Intent intent = new Intent(this, RecipeView.class);
         startActivity(intent);
     }
-
+    public void toUserInput(View v) {
+        Intent intent = new Intent(this, UserInput.class);
+        startActivity(intent);
+    }
 
 
 
