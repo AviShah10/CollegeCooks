@@ -28,7 +28,7 @@ public class DropDown extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_drop_down);
 
-
+        /**
         Ingredient ing0 = new Ingredient(1, "cup", true, "Black Beans");
         ingredients.add(ing0);
         Ingredient ing1 = new Ingredient(2, "slices", true, "Bread");
@@ -61,6 +61,75 @@ public class DropDown extends AppCompatActivity {
         ingredients.add(ing14);
         Ingredient ing15 = new Ingredient(0.25, "cup", false, "Oil");
         ingredients.add(ing15);
+         **/
+
+
+        Ingredient ing0 = new Ingredient(1, "", false, "Pizza");
+        Ingredient ing1 = new Ingredient(6, "ounces", false, "Hot Cheetos");
+        Ingredient ing2 = new Ingredient(1, "cup", true, "Ice Cream");
+        Ingredient ing3 = new Ingredient(1, "cups", true, "Waffle Mix");
+        Ingredient ing4 = new Ingredient(1, "", true, "Egg");
+        Ingredient ing5 = new Ingredient(0.25, "cups", false, "Oil");
+        Ingredient ing6 = new Ingredient(1, "spray", true, "Non Stick Spray");
+        Ingredient ing7 = new Ingredient(1, "plate", true, "Tortilla Chips");
+        Ingredient ing8 = new Ingredient(1, "cup", true, "Black Beans");
+        Ingredient ing9 = new Ingredient(1, "cup", true, "Cheese");
+        Ingredient ing10 = new Ingredient(2, "", true, "Tortillas");
+        Ingredient ing11 = new Ingredient(3, "", true, "Eggs");
+        Ingredient ing12 = new Ingredient(2, "slices", true, "Cheese");
+        Ingredient ing13 = new Ingredient(1, "slice", true, "Bread");
+        Ingredient ing14 = new Ingredient(1, "", true, "Tomato");
+        Ingredient ing15 = new Ingredient(1, "cup", true, "Cheese Sauce");
+        Ingredient ing16 = new Ingredient(2, "cups", true, "Pasta");
+        Ingredient ing17 = new Ingredient(3, "tablespoons", true, "Milk");
+        Ingredient ing18 = new Ingredient(2, "tablespoons", true, "Butter");
+        Ingredient ing19 = new Ingredient(2, "", true, "Chicken Breasts");
+        Ingredient ing20 = new Ingredient(0.5, "cups", true, "Mayonnaise");
+        Ingredient ing21 = new Ingredient(0.5, "cups", true, "Cranberries");
+        Ingredient ing22 = new Ingredient(8, "ounces", true, "Rice");
+        Ingredient ing23 = new Ingredient(2, "ounces", true, "Frozen Peas");
+        Ingredient ing24 = new Ingredient(1, "", true, "Small Onion");
+        Ingredient ing25 = new Ingredient(1, "pound", true, "Chicken Wings");
+        Ingredient ing26 = new Ingredient(1.5, "tablespoons", true, "Soy Sauce");
+        Ingredient ing27 = new Ingredient(1, "clove", true, "Garlic");
+        Ingredient ing28 = new Ingredient(0.5, "tablespoons", true, "Ginger");
+        Ingredient ing29 = new Ingredient(1, "can", true, "Lentils");
+        Ingredient ing30 = new Ingredient(0.5, "cups", true, "Flour");
+        Ingredient ing31 = new Ingredient(1, "pound", true, "Sausage");
+        ingredients.add(ing0);
+        ingredients.add(ing1);
+        ingredients.add(ing2);
+        ingredients.add(ing3);
+        ingredients.add(ing4);
+        ingredients.add(ing5);
+        ingredients.add(ing6);
+        ingredients.add(ing7);
+        ingredients.add(ing8);
+        ingredients.add(ing9);
+        ingredients.add(ing10);
+        ingredients.add(ing11);
+        ingredients.add(ing12);
+        ingredients.add(ing13);
+        ingredients.add(ing14);
+        ingredients.add(ing15);
+        ingredients.add(ing16);
+        ingredients.add(ing17);
+        ingredients.add(ing18);
+        ingredients.add(ing19);
+        ingredients.add(ing20);
+        ingredients.add(ing21);
+        ingredients.add(ing22);
+        ingredients.add(ing23);
+        ingredients.add(ing4);
+        ingredients.add(ing25);
+        ingredients.add(ing26);
+        ingredients.add(ing27);
+        ingredients.add(ing28);
+        ingredients.add(ing29);
+        ingredients.add(ing30);
+        ingredients.add(ing31);
+
+
 
 
         CheckBox checkBox0 = (CheckBox)findViewById(R.id.cb0);
@@ -110,7 +179,68 @@ public class DropDown extends AppCompatActivity {
         checkBox14.setText(ing14.getName());
         CheckBox checkBox15 = (CheckBox)findViewById(R.id.cb15);
         checkBoxes.add(checkBox15);
-        checkBox14.setText(ing15.getName());
+        checkBox15.setText(ing15.getName());
+        CheckBox checkBox16 = (CheckBox)findViewById(R.id.cb16);
+        checkBoxes.add(checkBox16);
+        checkBox16.setText(ing16.getName());
+        CheckBox checkBox17 = (CheckBox)findViewById(R.id.cb17);
+        checkBoxes.add(checkBox17);
+        checkBox17.setText(ing17.getName());
+        CheckBox checkBox18 = (CheckBox)findViewById(R.id.cb18);
+        checkBoxes.add(checkBox18);
+        checkBox18.setText(ing18.getName());
+        CheckBox checkBox19 = (CheckBox)findViewById(R.id.cb19);
+        checkBoxes.add(checkBox19);
+        checkBox19.setText(ing19.getName());
+        CheckBox checkBox20 = (CheckBox)findViewById(R.id.cb20);
+        checkBoxes.add(checkBox20);
+        checkBox20.setText(ing20.getName());
+        CheckBox checkBox21 = (CheckBox)findViewById(R.id.cb21);
+        checkBoxes.add(checkBox21);
+        checkBox21.setText(ing21.getName());
+        CheckBox checkBox22 = (CheckBox)findViewById(R.id.cb22);
+        checkBoxes.add(checkBox22);
+        checkBox22.setText(ing22.getName());
+        CheckBox checkBox23 = (CheckBox)findViewById(R.id.cb23);
+        checkBoxes.add(checkBox23);
+        checkBox23.setText(ing23.getName());
+        CheckBox checkBox24 = (CheckBox)findViewById(R.id.cb24);
+        checkBoxes.add(checkBox24);
+        checkBox24.setText(ing24.getName());
+        CheckBox checkBox25 = (CheckBox)findViewById(R.id.cb25);
+        checkBoxes.add(checkBox25);
+        checkBox25.setText(ing25.getName());
+        CheckBox checkBox26 = (CheckBox)findViewById(R.id.cb26);
+        checkBoxes.add(checkBox26);
+        checkBox26.setText(ing26.getName());
+        CheckBox checkBox27 = (CheckBox)findViewById(R.id.cb27);
+        checkBoxes.add(checkBox27);
+        checkBox27.setText(ing27.getName());
+        CheckBox checkBox28 = (CheckBox)findViewById(R.id.cb28);
+        checkBoxes.add(checkBox28);
+        checkBox28.setText(ing28.getName());
+        CheckBox checkBox29 = (CheckBox)findViewById(R.id.cb29);
+        checkBoxes.add(checkBox29);
+        checkBox29.setText(ing29.getName());
+        CheckBox checkBox30 = (CheckBox)findViewById(R.id.cb30);
+        checkBoxes.add(checkBox30);
+        checkBox30.setText(ing30.getName());
+        CheckBox checkBox31 = (CheckBox)findViewById(R.id.cb31);
+        checkBoxes.add(checkBox31);
+        checkBox31.setText(ing31.getName());
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
