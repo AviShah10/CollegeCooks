@@ -535,16 +535,15 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="#0099FF"
+        android:onClick="submit"
         android:text="@string/submitRecipeStr"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="323dp"
         app:layout_constraintBottom_toBottomOf="@id/verticalAll"
         app:layout_constraintLeft_toLeftOf="@id/verticalAll"
-        app:layout_constraintStart_toStartOf="@id/verticalAll"
         app:layout_constraintRight_toRightOf="@id/verticalAll"
 
-        />
+        app:layout_constraintStart_toStartOf="@id/verticalAll" />
 
 
 </android.support.constraint.ConstraintLayout>

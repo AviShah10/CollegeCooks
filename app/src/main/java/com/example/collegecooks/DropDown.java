@@ -231,19 +231,6 @@ public class DropDown extends AppCompatActivity {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 //    public void tester(View view){
 //        final Button button = findViewById(R.id.test);
@@ -272,7 +259,7 @@ public class DropDown extends AppCompatActivity {
             }
         }
         // Why is there a null value in the first index
-        Log.d(TAG, toast);
+        //Log.d(TAG, toast);
         Intent intent = new Intent(this, RecipeView.class);
         intent.putExtra("Ingredients User Has", finalIngredients);
         startActivity(intent);
