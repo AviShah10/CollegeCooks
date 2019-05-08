@@ -9,12 +9,16 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.util.ArrayList;
 
 
 public class UserInput extends AppCompatActivity {
 
-
+    private static final String TAG = "UserInput";
+    
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +31,7 @@ public class UserInput extends AppCompatActivity {
         TextView nameView = findViewById(R.id.recipeNameInput);
         String name = nameView.getText().toString();
 
-        Log.d("UserInpt", "time here");
+        Log.d(TAG, "Yessir");
         TextView timeView = findViewById(R.id.recipeTimeInput);
         int time = Integer.parseInt(timeView.getText().toString());
 
@@ -104,11 +108,11 @@ public class UserInput extends AppCompatActivity {
         TextView ingredNameView5 = findViewById(R.id.recipeIngredNameInput5);
         String ingredName5 = ingredNameView5.getText().toString();
 
-        Ingredient one = new Ingredient(denom1, measure1, ingredName1);
-        Ingredient two = new Ingredient(denom2, measure2, ingredName2);
-        Ingredient three = new Ingredient(denom3, measure3, ingredName3);
-        Ingredient four = new Ingredient(denom4, measure4, ingredName4);
-        Ingredient five = new Ingredient(denom5, measure5, ingredName5);
+        Ingredient one = new Ingredient(denom1, measure1, true, ingredName1);
+        Ingredient two = new Ingredient(denom2, measure2, true, ingredName2);
+        Ingredient three = new Ingredient(denom3, measure3,true, ingredName3);
+        Ingredient four = new Ingredient(denom4, measure4,true, ingredName4);
+        Ingredient five = new Ingredient(denom5, measure5,true, ingredName5);
 
         stuff.add(one);
         stuff.add(two);
@@ -116,7 +120,10 @@ public class UserInput extends AppCompatActivity {
         stuff.add(four);
         stuff.add(five);
 
-        Recipe recipe = new Recipe(stuff, time, directions, appliances, name);
+        Recipe recipe = new Recipe(stuff, time, directions, name);
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference("recipes");
+        myRef.child(recipe.getName().replace(" ", "")).setValue(recipe);
     }
 
 }

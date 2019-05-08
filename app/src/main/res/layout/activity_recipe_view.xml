@@ -53,6 +53,7 @@
             android:layout_weight="1"
             android:background="@color/colorPrimary"
             android:onClick="toIngredients"
+            android:scaleType="centerInside"
             android:text="@string/ingredientsStr"
             android:textColor="@color/colorAccent"
             android:textSize="22sp" />

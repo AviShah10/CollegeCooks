@@ -28,7 +28,7 @@
     <string name="recipe_image">Recipe Image</string>
     <string name="title">Title</string>
     <string name="time">Time</string>
-    <string name="appliancess">Appliances</string>
+    <string name="ingredients">Ingredients</string>
     <string name="directions_placeholder">Directions PLACEHOLDER </string>
     <string name="submitRecipeStr">Submit</string>
     <string name="recipeIngredientsStr">Ingredient:</string>
