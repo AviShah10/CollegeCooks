@@ -7,6 +7,7 @@
     android:background="@android:color/white"
     tools:context=".DropDown">
 
+
     <TextView
         android:id="@+id/ingredientsText"
         android:layout_width="0dp"
@@ -225,15 +226,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="18sp" />
-
             <CheckBox
                 android:id="@+id/cb30"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="18sp" />
-
-            <CheckBox
-                android:id="@+id/cb31"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="18sp" />

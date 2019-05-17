@@ -35,7 +35,7 @@
     <string name="denomination">ex. 3</string>
     <string name="measure">ex. cups</string>
     <string name="name">name</string>
-    <string name="input_recipes_measure_example">Input 5 Main Ingredients: Name, Number amount of, a measure (ex. Butter, 1, cup)</string>
+    <string name="input_recipes_measure_example">Input at least 2 Main Ingredients: Name, Number amount of, a measure (ex. Butter, 1, cup)</string>
     <string name="name37">Name</string>
     <string name="measure25">Measure</string>
     <string name="number234">Number</string>

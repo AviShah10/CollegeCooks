@@ -6,11 +6,14 @@ import android.os.Parcelable;
 import java.util.ArrayList;
 
 public class Recipe implements Parcelable {
+
+    //Instance variables
     private ArrayList<Ingredient> ingredients;
     private int time;
     private String method;
     private String name;
 
+    //Default constructor
     public Recipe() {
         this.ingredients = new ArrayList<Ingredient>();
         this.time = 0;
@@ -18,6 +21,7 @@ public class Recipe implements Parcelable {
         this.name = "";
     }
 
+    //Parameter constructor
     public Recipe(ArrayList<Ingredient> ingredients, int time, String method, String name){
         this.ingredients = ingredients;
         this.time = time;
@@ -26,6 +30,7 @@ public class Recipe implements Parcelable {
 
     }
 
+    //Parcelable constructor
     protected Recipe(Parcel in) {
         ingredients = in.createTypedArrayList(Ingredient.CREATOR);
         time = in.readInt();
@@ -34,6 +39,7 @@ public class Recipe implements Parcelable {
     }
 
     @Override
+    //Writes to the parcelable with parameters
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeTypedList(ingredients);
         dest.writeInt(time);
@@ -42,10 +48,12 @@ public class Recipe implements Parcelable {
     }
 
     @Override
+    //describeContents method
     public int describeContents() {
         return 0;
     }
 
+    //Creator for the parcelable recipe
     public static final Creator<Recipe> CREATOR = new Creator<Recipe>() {
         @Override
         public Recipe createFromParcel(Parcel in) {
@@ -58,6 +66,7 @@ public class Recipe implements Parcelable {
         }
     };
 
+    //Getter methods
     public ArrayList<Ingredient> getIngredients(){
         return this.ingredients;
     }
@@ -72,6 +81,7 @@ public class Recipe implements Parcelable {
     }
 
     @Override
+    //Overridden toString method
     public String toString() {
         return this.name;
     }

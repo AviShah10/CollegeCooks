@@ -16,12 +16,17 @@ public class GalleryActivity extends AppCompatActivity {
     private static final String TAG = "GalleryActivity";
     private Recipe recipe = new Recipe();
 
+    /**
+     * Creates the view of a single recipe
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gallery);
         Log.d(TAG, "onCreate: started.");
 
+        //Accepts a recipe from the recycler view
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
         recipe = bundle.getParcelable("recipe");
@@ -31,6 +36,9 @@ public class GalleryActivity extends AppCompatActivity {
         getIncomingIntent();
     }
 
+    /**
+     * If the recipe has an image and a name it will proceed to fill in the gallery with all the information of the recipe
+     */
     private void getIncomingIntent(){
         Log.d(TAG, "getIncomingIntent: checking for incoming intents.");
 
@@ -45,7 +53,11 @@ public class GalleryActivity extends AppCompatActivity {
         }
     }
 
-
+    /**
+     * Fills in all of the information for the recipe
+     * @param imageUrl
+     * @param imageName
+     */
     private void setImage(String imageUrl, String imageName){
         Log.d(TAG, "setImage: setting the image and name to widgets.");
 

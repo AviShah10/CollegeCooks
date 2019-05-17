@@ -129,67 +129,6 @@
                 tools:targetApi="o" />
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/appliances"
-            android:layout_width="match_parent"
-            android:layout_height="46dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/recipeAppliances"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/appliances"
-                android:textColor="@color/colorPrimaryDark"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="@id/verticalAll"
-                app:layout_constraintTop_toBottomOf="@id/directions" />
-
-            <EditText
-                android:id="@+id/recipeAppliancesInput"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:autofillHints=""
-                android:ems="10"
-                android:hint="@string/input_appliances_needed"
-                android:inputType="textLongMessage|textMultiLine|text"
-                android:textColor="@color/colorPrimaryDark"
-                android:textSize="14sp"
-                app:layout_constraintEnd_toEndOf="@id/verticalAll"
-                app:layout_constraintStart_toEndOf="@+id/recipeDirections"
-                app:layout_constraintTop_toTopOf="@id/verticalAll"
-                tools:targetApi="o" />
-
-            <TextView
-                android:id="@+id/recipeAppliances2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/appliances"
-                android:textColor="@color/colorPrimaryDark"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="@id/verticalAll"
-                app:layout_constraintTop_toBottomOf="@id/directions" />
-
-            <EditText
-                android:id="@+id/recipeAppliancesInput2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:autofillHints=""
-                android:ems="10"
-                android:hint="@string/input_appliances_needed"
-                android:inputType="textLongMessage|textMultiLine|text"
-                android:textColor="@color/colorPrimaryDark"
-                android:textSize="14sp"
-                app:layout_constraintEnd_toEndOf="@id/verticalAll"
-                app:layout_constraintStart_toEndOf="@+id/recipeDirections"
-                app:layout_constraintTop_toTopOf="@id/verticalAll"
-                tools:targetApi="o" />
-
-        </LinearLayout>
 
         <TextView
             android:id="@+id/textView"

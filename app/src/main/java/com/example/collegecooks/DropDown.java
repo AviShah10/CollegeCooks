@@ -23,47 +23,16 @@ public class DropDown extends AppCompatActivity {
     String toast;
     int i;
 
+    /**
+     * This onCreate creates the list of ingredients for the user to select from
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_drop_down);
 
-        /**
-        Ingredient ing0 = new Ingredient(1, "cup", true, "Black Beans");
-        ingredients.add(ing0);
-        Ingredient ing1 = new Ingredient(2, "slices", true, "Bread");
-        ingredients.add(ing1);
-        Ingredient ing2 = new Ingredient(1.5, "cups", true, "Cheese");
-        ingredients.add(ing2);
-        Ingredient ing3 = new Ingredient(1, "cup", true, "Cheese Sauce");
-        ingredients.add(ing3);
-        Ingredient ing4 = new Ingredient(1, "", true, "Egg");
-        ingredients.add(ing4);
-        Ingredient ing5 = new Ingredient(1, "cup", true, "Hot Cheetos");
-        ingredients.add(ing5);
-        Ingredient ing6 = new Ingredient(1, "cup", true, "Ice Cream");
-        ingredients.add(ing6);
-        Ingredient ing7 = new Ingredient(1, "cups", true, "Krusteaz Waffle Mix");
-        ingredients.add(ing7);
-        Ingredient ing8 = new Ingredient(3, "tablespoons", true, "Milk");
-        ingredients.add(ing8);
-        Ingredient ing9 = new Ingredient(1, "spray", true, "Non Stick Spray");
-        ingredients.add(ing9);
-        Ingredient ing10 = new Ingredient(2, "cups", true, "Pasta");
-        ingredients.add(ing10);
-        Ingredient ing11= new Ingredient(1, "", true, "Pizza");
-        ingredients.add(ing11);
-        Ingredient ing12 = new Ingredient(1, "", true, "Tomato");
-        ingredients.add(ing12);
-        Ingredient ing13 = new Ingredient(2, "", true, "Tortillas");
-        ingredients.add(ing13);
-        Ingredient ing14 = new Ingredient(1, "tablespoon", true, "Vegetable Oil");
-        ingredients.add(ing14);
-        Ingredient ing15 = new Ingredient(0.25, "cup", false, "Oil");
-        ingredients.add(ing15);
-         **/
-
-
+        //Create ingredients
         Ingredient ing0 = new Ingredient(1, "", false, "Pizza");
         Ingredient ing1 = new Ingredient(6, "ounces", false, "Hot Cheetos");
         Ingredient ing2 = new Ingredient(1, "cup", true, "Ice Cream");
@@ -73,29 +42,30 @@ public class DropDown extends AppCompatActivity {
         Ingredient ing6 = new Ingredient(1, "spray", true, "Non Stick Spray");
         Ingredient ing7 = new Ingredient(1, "plate", true, "Tortilla Chips");
         Ingredient ing8 = new Ingredient(1, "cup", true, "Black Beans");
-        Ingredient ing9 = new Ingredient(1, "cup", true, "Cheese");
+        Ingredient ing9 = new Ingredient(1, "cup", true, "Shredded Cheese");
         Ingredient ing10 = new Ingredient(2, "", true, "Tortillas");
-        Ingredient ing11 = new Ingredient(3, "", true, "Eggs");
-        Ingredient ing12 = new Ingredient(2, "slices", true, "Cheese");
-        Ingredient ing13 = new Ingredient(1, "slice", true, "Bread");
-        Ingredient ing14 = new Ingredient(1, "", true, "Tomato");
-        Ingredient ing15 = new Ingredient(1, "cup", true, "Cheese Sauce");
-        Ingredient ing16 = new Ingredient(2, "cups", true, "Pasta");
-        Ingredient ing17 = new Ingredient(3, "tablespoons", true, "Milk");
-        Ingredient ing18 = new Ingredient(2, "tablespoons", true, "Butter");
-        Ingredient ing19 = new Ingredient(2, "", true, "Chicken Breasts");
-        Ingredient ing20 = new Ingredient(0.5, "cups", true, "Mayonnaise");
-        Ingredient ing21 = new Ingredient(0.5, "cups", true, "Cranberries");
-        Ingredient ing22 = new Ingredient(8, "ounces", true, "Rice");
-        Ingredient ing23 = new Ingredient(2, "ounces", true, "Frozen Peas");
-        Ingredient ing24 = new Ingredient(1, "", true, "Small Onion");
-        Ingredient ing25 = new Ingredient(1, "pound", true, "Chicken Wings");
-        Ingredient ing26 = new Ingredient(1.5, "tablespoons", true, "Soy Sauce");
-        Ingredient ing27 = new Ingredient(1, "clove", true, "Garlic");
-        Ingredient ing28 = new Ingredient(0.5, "tablespoons", true, "Ginger");
-        Ingredient ing29 = new Ingredient(1, "can", true, "Lentils");
-        Ingredient ing30 = new Ingredient(0.5, "cups", true, "Flour");
-        Ingredient ing31 = new Ingredient(1, "pound", true, "Sausage");
+        Ingredient ing11 = new Ingredient(1, "slice", true, "Bread");
+        Ingredient ing12= new Ingredient(1, "", true, "Tomato");
+        Ingredient ing13 = new Ingredient(1, "cup", true, "Cheese Sauce");
+        Ingredient ing14 = new Ingredient(2, "cups", true, "Pasta");
+        Ingredient ing15 = new Ingredient(3, "tablespoons", true, "Milk");
+        Ingredient ing16 = new Ingredient(2, "tablespoons", true, "Butter");
+        Ingredient ing17 = new Ingredient(2, "", true, "Chicken Breasts");
+        Ingredient ing18 = new Ingredient(0.5, "cups", true, "Mayonnaise");
+        Ingredient ing19 = new Ingredient(0.5, "cups", true, "Cranberries");
+        Ingredient ing20 = new Ingredient(8, "ounces", true, "Rice");
+        Ingredient ing21 = new Ingredient(2, "ounces", true, "Frozen Peas");
+        Ingredient ing22 = new Ingredient(1, "", true, "Small Onion");
+        Ingredient ing23 = new Ingredient(1, "pound", true, "Chicken Wings");
+        Ingredient ing24 = new Ingredient(1.5, "tablespoons", true, "Soy Sauce");
+        Ingredient ing25 = new Ingredient(1, "clove", true, "Garlic");
+        Ingredient ing26 = new Ingredient(0.5, "tablespoons", true, "Ginger");
+        Ingredient ing27 = new Ingredient(1, "can", true, "Lentils");
+        Ingredient ing28 = new Ingredient(0.5, "cups", true, "Flour");
+        Ingredient ing29 = new Ingredient(1, "pound", true, "Sausage");
+        Ingredient ing30 = new Ingredient(2, "slices", true, "Sliced Cheese");
+
+        //Add ingredients to an arrayList of Ingredients
         ingredients.add(ing0);
         ingredients.add(ing1);
         ingredients.add(ing2);
@@ -127,11 +97,9 @@ public class DropDown extends AppCompatActivity {
         ingredients.add(ing28);
         ingredients.add(ing29);
         ingredients.add(ing30);
-        ingredients.add(ing31);
 
 
-
-
+        //Creates checkboxes, adds them to an arrayList of checkboxes, sets each name to the name of its corresponding Ingredient
         CheckBox checkBox0 = (CheckBox)findViewById(R.id.cb0);
         checkBoxes.add(checkBox0);
         checkBox0.setText(ing0.getName());
@@ -225,9 +193,6 @@ public class DropDown extends AppCompatActivity {
         CheckBox checkBox30 = (CheckBox)findViewById(R.id.cb30);
         checkBoxes.add(checkBox30);
         checkBox30.setText(ing30.getName());
-        CheckBox checkBox31 = (CheckBox)findViewById(R.id.cb31);
-        checkBoxes.add(checkBox31);
-        checkBox31.setText(ing31.getName());
 
 
 
@@ -250,6 +215,10 @@ public class DropDown extends AppCompatActivity {
 //        Log.d(TAG, toast);
 //    }
 
+    /**
+     * Creates a list of ingredients checked and passes it to the RecipeView class
+     * @param v
+     */
     public void toRecipes(View v) {
         for(i = 0; i < ingredients.size(); i++){
             CheckBox temp = checkBoxes.get(i);

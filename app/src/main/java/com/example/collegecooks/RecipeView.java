@@ -34,15 +34,21 @@ public class RecipeView extends AppCompatActivity {
 
     private static final String TAG = "RecipeView";
 
+    //Variables for the class
     private ArrayList<Recipe> finalRecipes = new ArrayList<Recipe>();
     private ArrayList<String> mNames = new ArrayList<>();
     private ArrayList<String> mImageUrls = new ArrayList<>();
     private ArrayList<Ingredient> finalIngredients = new ArrayList<Ingredient>();
     String ing;
 
+    //ArrayList for sorting algorithm
     private ArrayList<Integer> recipeMiss = new ArrayList<Integer>();
 
 
+    /**
+     * Accepts ingredients from the DropDown class and calls the sort method
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -72,6 +78,7 @@ public class RecipeView extends AppCompatActivity {
          **/
 
 
+        //Accepts data from DropDown
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("recipes");
 
@@ -99,6 +106,7 @@ public class RecipeView extends AppCompatActivity {
     }
 
 
+    //creates recycler view
     private void initRecyclerView() {
         Log.d(TAG, "initRecyclerView: init recyclerView.");
         RecyclerView recyclerView = findViewById(R.id.recycler_view);
@@ -115,24 +123,28 @@ public class RecipeView extends AppCompatActivity {
 
     }
 
+    //Opens the DropDown class
     public void toIngredients(View v) {
         Intent intent = new Intent(this, DropDown.class);
         startActivity(intent);
     }
 
+    //Reopens the RecipeView class
     public void toRecipes(View v) {
         Intent intent = new Intent(this, RecipeView.class);
         startActivity(intent);
     }
 
+    //Opens the UserInput tab
     public void toUserInput(View v) {
         Intent intent = new Intent(this, UserInput.class);
         startActivity(intent);
     }
 
-
+    //Sorts the recipes based on the ingredients selected
     public void godSort() {
         //godSort1 sets up the ArrayList of misses
+
 
         int recipeMissInt = 0;
         int recipeHitInt = 0;

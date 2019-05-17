@@ -20,11 +20,14 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     @Override
+    //Creates the opening screen of the app
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         push();
     }
+
+    //Pushes all of the recipes to firebase
     public void push(){
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("recipes");
@@ -38,10 +41,10 @@ public class MainActivity extends AppCompatActivity {
         Ingredient nonStickSpray = new Ingredient(1, "spray", true, "Non Stick Spray");
         Ingredient tortillaChips = new Ingredient(1, "plate", true, "Tortilla Chips");
         Ingredient blackBeans = new Ingredient(1, "cup", true, "Black Beans");
-        Ingredient cheese = new Ingredient(1, "cup", true, "Cheese");
+        Ingredient cheese = new Ingredient(1, "cup", true, "Shredded Cheese");
         Ingredient tortilla = new Ingredient(2, "", true, "Tortillas");
-        Ingredient egg2 = new Ingredient(3, "", true, "Eggs");
-        Ingredient cheese2 = new Ingredient(2, "slices", true, "Cheese");
+        Ingredient egg2 = new Ingredient(3, "", true, "Egg");
+        Ingredient cheese2 = new Ingredient(2, "slices", true, "Sliced Cheese");
         Ingredient bread = new Ingredient(1, "slice", true, "Bread");
         Ingredient tomato = new Ingredient(1, "", true, "Tomato");
         Ingredient cheeseSauce = new Ingredient(1, "cup", true, "Cheese Sauce");
@@ -217,6 +220,7 @@ public class MainActivity extends AppCompatActivity {
         myRef.child("sausagePasta").setValue(sausagePasta);
 
 
+        //Testing to see if data can be pulled from Firebase
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -236,6 +240,10 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * Opens the list of ingredients
+     * @param v
+     */
     public void welcome(View v) {
         Intent intent = new Intent(this, DropDown.class);
         startActivity(intent);

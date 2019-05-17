@@ -22,11 +22,13 @@ import de.hdodenhof.circleimageview.CircleImageView;
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>{
     private static final String TAG = "RecyclerViewAdapter";
 
+    //Variables
     private ArrayList<String> mImageUrls = new ArrayList<>();
     private ArrayList<String> mNames = new ArrayList<>();
     private ArrayList<Recipe> recipes = new ArrayList<>();
     private Context mContext;
 
+    //Parameter constructor
     public RecyclerViewAdapter(Context context, ArrayList<String> mNames, ArrayList<String> mImageUrls, ArrayList<Recipe> recipes) {
         this.mNames = mNames;
         this.mImageUrls = mImageUrls;
@@ -35,6 +37,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     }
 
     @Override
+    /**
+     * creates the view for the recycler view
+     */
     public ViewHolder onCreateViewHolder(ViewGroup parent, int i) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_listitem, parent, false);
         ViewHolder holder = new ViewHolder(view);
@@ -42,6 +47,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     }
 
     @Override
+    //Creates a button listener to open a specific recipe
     public void onBindViewHolder(ViewHolder holder, final int position) {
         Log.d(TAG, "onBindViewHolder: called.");
         Glide.with(mContext).asBitmap().load(mImageUrls.get(position)).into(holder.image);
@@ -69,10 +75,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     }
 
     @Override
+    //Getter method
     public int getItemCount() {
         return mNames.size();
     }
 
+    //Recipe getter method
     public Recipe getRecipe(String mName){
         Log.d(TAG,"Inside getRecipe(): " + mName + " yessir");
         for(int i = 0; i < recipes.size(); i++){
@@ -81,6 +89,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         return recipes.get(3);
     }
 
+    //Creates ViewHolder
     public class ViewHolder extends RecyclerView.ViewHolder{
         CircleImageView image;
         TextView imageName;
